@@ -39,7 +39,7 @@ public class StockInfoPipeline implements Pipeline {
                 StockInfo stockInfo = new StockInfo();
                 stockInfo.setCode(code);
                 stockInfo.setName(name);
-                stockInfoMapper.insert(stockInfo);
+                stockInfoMapper.insertOrUpdate(stockInfo);
             }
             logger.info("save StockInfoPipeline to Mysql success! size:{}", size);
         }

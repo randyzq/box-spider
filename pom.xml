@@ -85,9 +85,14 @@
         </dependency>
 
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.2.16</version>  <!-- 使用最新稳定版本 -->
+        </dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.15</version>
+            <version>5.1.49</version> <!-- 选择一个与MySQL 5.7兼容的版本 -->
         </dependency>
 
         <!-- httpclient相关依赖 -->

@@ -85,7 +85,9 @@ public class SimpleSpiderService {
                 int size = dataArray.size();
                 for (int i = 0; i < size; i++) {
                     JSONObject dataJsonObject = dataArray.getJSONObject(i);
-                    commonDao.saveObject(dataJsonObject, spiderName, idColumn);
+                    log.info("dataJsonObject:{},/n spiderName:{},/n idColumn:{}",dataJsonObject.toJSONString(), spiderName, idColumn);
+//                    Fixme MONGODB安装完毕后放开
+//                    commonDao.saveObject(dataJsonObject, spiderName, idColumn);
                 }
                 log.info("save data to MongoDB success! spiderName:{}, size:{}", spiderName, size);
             }

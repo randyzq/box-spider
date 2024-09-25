@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aposs.box.spider.domain.stock.dao.StockInfoMapper">
+
+    <resultMap id="StockInfoResultMap" type="com.aposs.box.spider.domain.stock.entity.StockInfo">
+        <id property="id" column="id"/>
+        <result property="code" column="code"/>
+        <result property="name" column="name"/>
+        <result property="market" column="market"/>
+        <result property="industry" column="industry"/>
+        <result property="city" column="city"/>
+    </resultMap>
+
+    <insert id="insertOrUpdate" parameterType="com.aposs.box.spider.domain.stock.entity.StockInfo">
+        INSERT INTO tbl_stock_info (code, name)
+        VALUES (#{code}, #{name})
+        ON DUPLICATE KEY UPDATE name = #{name}
+    </insert>
+
+</mapper>
